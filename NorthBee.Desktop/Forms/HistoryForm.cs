@@ -13,6 +13,7 @@ namespace NorthBee.Desktop.Forms
         private readonly Guest guest;
 
         /// <summary>
+        /// PKGH
         /// Инициализирует новый экземпляр <see cref="MainForm"/>
         /// </summary>
         public HistoryForm(Guest guest) : base()
@@ -24,7 +25,6 @@ namespace NorthBee.Desktop.Forms
 
         private void HistoryForm_Load(object sender, System.EventArgs e)
         {
-            // TODO: This line of code loads data into the 'turchaninov_andrey_northbeeDataSet.Hotel' table. You can move, or remove it, as needed.
             this.roomTableAdapter.Fill(this.turchaninov_andrey_northbeeDataSet.Room);
             this.historyTableAdapter.Fill(this.turchaninov_andrey_northbeeDataSet.History);
 

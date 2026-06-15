@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseForm));
             this.splitContainerMainBackground = new System.Windows.Forms.SplitContainer();
             this.buttonActionAccentBackground = new System.Windows.Forms.Button();
             this.titleLabel = new System.Windows.Forms.Label();
@@ -94,6 +95,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.splitContainerMainBackground);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(375, 316);
             this.Name = "BaseForm";
             this.Text = "Form1";

@@ -41,10 +41,10 @@
             this.birthdayDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.buttonSaveAccentBackground = new System.Windows.Forms.Button();
             this.genderIdComboBox = new System.Windows.Forms.ComboBox();
-            this.statusIdComboBox = new System.Windows.Forms.ComboBox();
             this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.genderTableAdapter = new NorthBee.Desktop.turchaninov_andrey_northbeeDataSetTableAdapters.GenderTableAdapter();
+            this.statusIdComboBox = new System.Windows.Forms.ComboBox();
             this.statusBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.genderTableAdapter = new NorthBee.Desktop.turchaninov_andrey_northbeeDataSetTableAdapters.GenderTableAdapter();
             this.statusTableAdapter = new NorthBee.Desktop.turchaninov_andrey_northbeeDataSetTableAdapters.StatusTableAdapter();
             fullNameLabel = new System.Windows.Forms.Label();
             birthdayLabel = new System.Windows.Forms.Label();
@@ -60,8 +60,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // titleLabel
+            // 
+            this.titleLabel.AutoSize = false;
+            this.titleLabel.Location = new System.Drawing.Point(68, 9);
+            this.titleLabel.Size = new System.Drawing.Size(268, 42);
+            // 
             // buttonActionAccentBackground
             // 
+            this.buttonActionAccentBackground.Location = new System.Drawing.Point(72, 54);
             this.buttonActionAccentBackground.Text = "Назад";
             this.buttonActionAccentBackground.Click += new System.EventHandler(this.buttonActionAccentBackground_Click);
             // 
@@ -102,6 +109,26 @@
             birthdayLabel.Size = new System.Drawing.Size(109, 16);
             birthdayLabel.TabIndex = 2;
             birthdayLabel.Text = "Дата рождения:";
+            // 
+            // genderIdLabel
+            // 
+            genderIdLabel.AutoSize = true;
+            genderIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            genderIdLabel.Location = new System.Drawing.Point(23, 72);
+            genderIdLabel.Name = "genderIdLabel";
+            genderIdLabel.Size = new System.Drawing.Size(36, 16);
+            genderIdLabel.TabIndex = 8;
+            genderIdLabel.Text = "Пол:";
+            // 
+            // statusIdLabel
+            // 
+            statusIdLabel.AutoSize = true;
+            statusIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            statusIdLabel.Location = new System.Drawing.Point(23, 96);
+            statusIdLabel.Name = "statusIdLabel";
+            statusIdLabel.Size = new System.Drawing.Size(56, 16);
+            statusIdLabel.TabIndex = 9;
+            statusIdLabel.Text = "Статус:";
             // 
             // turchaninov_andrey_northbeeDataSet
             // 
@@ -156,16 +183,6 @@
             this.buttonSaveAccentBackground.UseVisualStyleBackColor = true;
             this.buttonSaveAccentBackground.Click += new System.EventHandler(this.buttonSaveAccentBackground_Click);
             // 
-            // genderIdLabel
-            // 
-            genderIdLabel.AutoSize = true;
-            genderIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            genderIdLabel.Location = new System.Drawing.Point(23, 72);
-            genderIdLabel.Name = "genderIdLabel";
-            genderIdLabel.Size = new System.Drawing.Size(36, 16);
-            genderIdLabel.TabIndex = 8;
-            genderIdLabel.Text = "Пол:";
-            // 
             // genderIdComboBox
             // 
             this.genderIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.guestBindingSource, "GenderId", true));
@@ -180,15 +197,10 @@
             this.genderIdComboBox.TabIndex = 9;
             this.genderIdComboBox.ValueMember = "IdGender";
             // 
-            // statusIdLabel
+            // genderBindingSource
             // 
-            statusIdLabel.AutoSize = true;
-            statusIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            statusIdLabel.Location = new System.Drawing.Point(23, 96);
-            statusIdLabel.Name = "statusIdLabel";
-            statusIdLabel.Size = new System.Drawing.Size(56, 16);
-            statusIdLabel.TabIndex = 9;
-            statusIdLabel.Text = "Статус:";
+            this.genderBindingSource.DataMember = "Gender";
+            this.genderBindingSource.DataSource = this.turchaninov_andrey_northbeeDataSet;
             // 
             // statusIdComboBox
             // 
@@ -204,19 +216,14 @@
             this.statusIdComboBox.TabIndex = 10;
             this.statusIdComboBox.ValueMember = "IdStatus";
             // 
-            // genderBindingSource
-            // 
-            this.genderBindingSource.DataMember = "Gender";
-            this.genderBindingSource.DataSource = this.turchaninov_andrey_northbeeDataSet;
-            // 
-            // genderTableAdapter
-            // 
-            this.genderTableAdapter.ClearBeforeFill = true;
-            // 
             // statusBindingSource
             // 
             this.statusBindingSource.DataMember = "Status";
             this.statusBindingSource.DataSource = this.turchaninov_andrey_northbeeDataSet;
+            // 
+            // genderTableAdapter
+            // 
+            this.genderTableAdapter.ClearBeforeFill = true;
             // 
             // statusTableAdapter
             // 
@@ -230,7 +237,6 @@
             this.Name = "CreateGuestForm";
             this.Load += new System.EventHandler(this.CreateGuestForm_Load);
             this.splitContainerMainBackground.Panel1.ResumeLayout(false);
-            this.splitContainerMainBackground.Panel1.PerformLayout();
             this.splitContainerMainBackground.Panel2.ResumeLayout(false);
             this.splitContainerMainBackground.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMainBackground)).EndInit();

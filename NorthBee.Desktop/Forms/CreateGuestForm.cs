@@ -15,6 +15,7 @@ namespace NorthBee.Desktop.Forms
         private readonly Guest guest;
 
         /// <summary>
+        /// PKGH
         /// Инициализирует новый экземпляр <see cref="MainForm"/>
         /// </summary>
         public CreateGuestForm() : base()
@@ -25,13 +26,14 @@ namespace NorthBee.Desktop.Forms
         }
 
         /// <summary>
+        /// PKGH
         /// Инициализирует новый экземпляр <see cref="MainForm"/>
         /// </summary>
         public CreateGuestForm(Guest guest) : base()
         {
             InitializeComponent();
             this.guest = guest;
-            UserExperienceService.SetTitle(this, $"Редактирования гостя {guest.FullName}");
+            UserExperienceService.SetTitle(this, $"Редактирование гостя {guest.FullName}");
         }
 
         private void FillModelFields()
@@ -44,11 +46,8 @@ namespace NorthBee.Desktop.Forms
 
         private void CreateGuestForm_Load(object sender, System.EventArgs e)
         {
-            // TODO: This line of code loads data into the 'turchaninov_andrey_northbeeDataSet.Status' table. You can move, or remove it, as needed.
             this.statusTableAdapter.Fill(this.turchaninov_andrey_northbeeDataSet.Status);
-            // TODO: This line of code loads data into the 'turchaninov_andrey_northbeeDataSet.Gender' table. You can move, or remove it, as needed.
             this.genderTableAdapter.Fill(this.turchaninov_andrey_northbeeDataSet.Gender);
-            //this.guestTableAdapter.Fill(this.turchaninov_andrey_northbeeDataSet.Guest);
 
             if (!guest.IsNew)
             {

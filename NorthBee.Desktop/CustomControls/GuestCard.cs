@@ -18,11 +18,13 @@ namespace NorthBee.Desktop.CustomControls
         private readonly Guest guest;
 
         /// <summary>
+        /// PKGH
         /// Событие по нажатию на карточку
         /// </summary>
         public Action OnClick;
 
         /// <summary>
+        /// PKGH
         /// Инициализирует новый экземпляр <see cref="GuestCard"/>
         /// </summary>
         public GuestCard(Guest guest)
@@ -38,7 +40,7 @@ namespace NorthBee.Desktop.CustomControls
             labelFullName.Text = $"ФИО: {guest.FullName}";
             labelGender.Text = $"Пол: {guest.Gender.GenderName}";
             labelBirthDay.Text = $"Дата рождения: {guest.Birthday.ToShortDateString()}";
-            labelBirthDay.Text = $"Сколько останавливался : {guest.History.Count()}";
+            labelArriveCount.Text = $"Сколько останавливался : {guest.History.Count()}";
             labelStatus.Text = $"Статус: {guest.Status.StatusName}";
         }
 

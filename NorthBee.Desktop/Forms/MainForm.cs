@@ -13,6 +13,7 @@ namespace NorthBee.Desktop.Forms
     public partial class MainForm : BaseForm
     {
         /// <summary>
+        /// PKGH
         /// Инициализирует новый экземпляр <see cref="MainForm"/>
         /// </summary>
         public MainForm() : base()
